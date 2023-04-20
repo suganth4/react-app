@@ -1,23 +1,32 @@
-import React from 'react'
+import React from "react";
 
-function Card() {
+function Card({index, data}) {
+  console.log("v", data)
+  const color = ["green", "brown", "blue", "orange", "red", "greenyellow"]
   return (
-    <div>
-      <div>
-        <div>
-          <img src="" alt="" />
+    <div className="card" style={{backgroundColor:color[index]}}>
+      <div className="section1">
+        <div className="inner-section1" >
+          <img
+            src={data.logo}
+            alt=""
+            className="logo"
+          />
         </div>
-        <div>
-          <p>Astonishing features requires worry-free security</p>
-          <hr />
-          <p>1 Year Free Mobile Security</p>
-        </div>
-        <div>
-          <img src="" alt="" />
+        <div className="inner-section2">
+          <p className="para">{data.title}</p>
+          <p>{data.desc}</p>
         </div>
       </div>
+      <div className="image-container">
+        <img
+          src={data.image}
+          alt=""
+          className="image"
+        />
+      </div>
     </div>
-  )
+  );
 }
 
-export default Card
+export default Card;
