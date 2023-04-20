@@ -1,11 +1,45 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Open Sans';
+}
+
+.header {
+  position: absolute;
+}
+
+.header-img {
+  position: absolute;
+  max-width: 50px;
+  top: 15px;
+  left: 20px;
+}
+
 .App {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   max-width: 1440px;
   margin: 0px auto;
 }
 
-* {
-  font-family: 'Open Sans';
+.slick-prev,
+.slick-next {
+  display: none;
 }
 
+@media screen and (max-width: 480px) {
+  .App {
+    display: block;
+  }
+
+  .slick-prev,
+  .slick-next {
+    display: none;
+  }
+
+  .header-img-mobile {
+    width: 80px;
+    margin: 30px;
+  }
+
+}

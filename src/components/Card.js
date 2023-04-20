@@ -1,10 +1,10 @@
 import React from "react";
 
-function Card({index, data}) {
+function Card({ index, data }) {
   console.log("v", data)
   const color = ["green", "brown", "blue", "orange", "red", "greenyellow"]
   return (
-    <div className="card" style={{backgroundColor:color[index]}}>
+    <div className="card" style={{ backgroundColor: color[index] }}>
       <div className="section1">
         <div className="inner-section1" >
           <img
@@ -15,7 +15,7 @@ function Card({index, data}) {
         </div>
         <div className="inner-section2">
           <p className="para">{data.title}</p>
-          <p>{data.desc}</p>
+          <p className="desc">{data.desc}</p>
         </div>
       </div>
       <div className="image-container">
